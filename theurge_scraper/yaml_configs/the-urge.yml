@@ -1,0 +1,17 @@
+extractors:
+    listing-extractor:
+        xpath: //a[contains(@href, "/search/")]
+    product-extractor:
+        xpath: //a[contains(@href, "/product/")]
+        callback: parse_item
+
+fields:
+    title:
+      xpath: //title/text()
+    price:
+      xpath: //div[@class="eP0wn _26-lJ _28iFq"]/text()
+    category:
+      xpath: //ol[@itemtype="http://schema.org/BreadcrumbList"]/li/a/span/text()
+
+
+
